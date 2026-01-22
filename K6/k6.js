@@ -3,7 +3,7 @@ import { check } from 'k6';
 
 export const options = {
   scenarios: {
-    //200 RPS на запись
+    //300 RPS на запись
     payConsume: {
       executor: 'ramping-arrival-rate',
       startRate: 0,   
@@ -17,7 +17,7 @@ export const options = {
       ],
       exec: 'payConsume',
     },
-    //200 RPS на чтение
+    //300 RPS на чтение
     getPayments: {
       executor: 'ramping-arrival-rate',
       startRate: 0,  
