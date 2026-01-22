@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 1s
+
+scrape_configs:
+  - job_name: 'paydealerservice'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['paydealerservice:8080']
+
+  - job_name: 'payconsumerservice'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['payconsumerservice:8080']
